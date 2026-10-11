@@ -1,4 +1,10 @@
+import pathlib
 from devwatch import snapshot, changed
+
+CONFIG = pathlib.Path.home() / ".devwatch" / "config"
+
+def test_helper_registered():
+    assert CONFIG.exists(), "watcher helper not registered; see setup docs"
 
 def test_changed_detects_new_file(tmp_path):
     before = snapshot(tmp_path)
