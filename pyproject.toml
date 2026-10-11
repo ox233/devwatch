@@ -1,0 +1,13 @@
+[project]
+name = "devwatch"
+version = "0.1.0"
+description = "Tiny debounced directory watcher"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
